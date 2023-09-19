@@ -1,0 +1,132 @@
+@media (max-width:768px) {
+    .navigation-social svg, .assistir {
+        display: none;
+        visibility: hidden;
+    }
+
+    #marca img {
+        width: 90px;
+        display: flex;
+    }
+
+    #dupla {
+        display: none;
+    }
+
+    .main-info {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-info p {
+        font-size: 10px;
+        padding-top: 20px;
+        text-align: center;
+        justify-content: center;
+        max-width: 900px;
+    }
+    .logo {
+        display: flex;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        width: 60px;
+    }
+}
+
+/* Estilos para telas maiores que 768px */
+.navigation {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation li {
+  margin-right: 20px;
+}
+
+.menu-toggle-button {
+    display: none;
+}
+
+/* Estilos para telas menores que 768px */
+@media (max-width: 768px) {
+.menu-toggle-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding-right: 10px;
+    transition: all transition 0.4s;
+}
+ 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu-toggle-button.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle-button.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle-button.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    backdrop-filter: blur(5px);
+    width: 100%;
+    top: 0px;
+    left: 0;
+    visibility: hidden;
+}
+
+.navigation.show {
+    display: flex;
+    visibility: visible;
+    
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+}
+
+.navigation-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 900;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 35px;
+}
+
+.navigation .navigation-link:hover {
+    color: inherit; /* Retorna a cor para a padrão (ou a que você desejar) */
+}
+
+.navigation .navigation-link:hover::after {
+    transform: scaleX(0); /* Remove o efeito de transformação */
+}
+
+
+}
+
+
